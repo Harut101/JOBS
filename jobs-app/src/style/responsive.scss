@@ -1,0 +1,57 @@
+@media only screen and (max-width: 810px) {
+    .App {
+        .app-body {
+            flex-direction: column;
+            justify-content: start;
+
+            .filter-section {
+                width: unset;
+                margin-right: unset;
+            }
+
+            .jobs-section {
+                width: unset;
+                height: 600px;
+            }
+        }
+
+    }
+
+    .Jobs-Item {
+        width: 100%;
+
+        .info-wrapper {
+            flex-direction: column;
+            width: 100%;
+
+            .job-info {
+                justify-content: start;
+
+               .location,.employment {
+                    margin-left: 10px;
+                }
+            }
+
+            .buttons-wrapper {
+                flex-direction: row;
+                position: unset;
+                width: 100%;
+                align-items: center;
+                justify-content: start;
+                margin-top: 10px;
+
+                button:first-child {
+                    margin: 0 5px 0 0;
+                }
+
+                .apply-job {
+                    padding: 5px 8px;
+                }
+                
+                .bookmark {
+                    padding: 5px 8px;
+                }
+            }
+        }
+    }
+}

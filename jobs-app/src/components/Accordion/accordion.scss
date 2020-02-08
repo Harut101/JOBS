@@ -1,0 +1,64 @@
+.Accordion {
+    display: flex;
+    min-width: 150px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .accordion-header {
+        height: 30px;
+        width: 100%;
+        border-radius: 3px 3px 0 0 ;
+        background-color: #e3e3e3;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 7px;
+        cursor: pointer;
+
+        .accordion-title {
+            margin-left: 10px;
+        }
+
+        .fa-plus, .fa-minus {
+            margin: 3px 10px 0 0;
+            color: #7c7c7c;
+        }
+    }
+
+    .accordion-body {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        transition: all .3s;
+        max-height: 250px;
+        overflow: hidden;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        background: white;
+
+        &.closed {
+            max-height: 0;
+            padding-bottom: 0;
+        }
+
+        .filter-wrapper:last-child {
+            margin-bottom: 10px;
+        }
+
+        .filter-wrapper {
+            margin-top: 10px;
+            display: flex;
+            align-items: flex-end;
+
+            .checkbox {
+                margin: 1px;
+            }
+
+            .checkbox-title {
+                margin-left: 10px;
+            }
+        }
+    }
+
+
+}

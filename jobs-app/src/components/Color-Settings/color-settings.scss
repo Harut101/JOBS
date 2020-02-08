@@ -1,0 +1,72 @@
+.Color-Settings {
+    width: 50px;
+    height: 50px;
+    background: white;
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    .fa-cog{
+        font-size: 25px
+    }
+
+    .style-box {
+        width: 130px;
+        height: 120px;
+        background: white;
+        position: absolute;
+        right: 50px;
+        top: 0;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+        display: none;
+
+        &.open {
+            display: flex;
+        }
+
+        .title {
+            width: 100%;
+            text-align: left;
+            margin-left: 19px;
+        }
+
+        .color-box {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            justify-content: center;
+            padding-bottom: 5px;
+
+            .color {
+                width: 40px;
+                height: 40px;
+                margin: 5px;
+    
+                 &.green {
+                     background: green;
+                 }
+    
+                 &.orange {
+                    background: orange;
+                }
+    
+                &.blue {
+                    background: blue;
+                }
+    
+                &.purple {
+                    background: purple;
+                }
+    
+            }
+        }
+    }
+}

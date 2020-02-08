@@ -1,0 +1,54 @@
+:root {
+  --main-bg-color: rgb(177, 177, 177);
+}
+
+body {
+  background: var(--main-bg-color);
+}
+
+.App {
+  text-align: center;
+
+  .app-body {
+    display: flex;
+    max-width: 980px;
+    min-height: 610px;
+    overflow: hidden;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    .filter-section {
+      width: 26%;
+      margin-right: 10px;
+    }
+
+    .jobs-section {
+
+      &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+          background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar{
+        width: 8px;
+        background-color: #F5F5F5;
+      }
+
+      &::-webkit-scrollbar-thumb{
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+        background-color: var(--main-bg-color);
+      }
+
+      width: 72%;
+      max-height: 555px;
+      overflow: auto;
+      background: white;
+      border-radius: 4px;
+      padding-top: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}

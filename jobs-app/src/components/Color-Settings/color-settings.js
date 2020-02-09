@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { changeColor } from '../../helpers/site-style/site-style.js'
-import '../Color-Settings/color-settings.scss'
+import { changeColor } from '../../helpers/site-style/site-style.js';
+import '../Color-Settings/color-settings.scss';
 
 function ColorSettings() {
-    const [openBox, setOpenBox] = useState(false)
+    const [openBox, setOpenBox] = useState(false);
 
     function selectColor(event) {
         if (event.target.classList.contains('color')) {

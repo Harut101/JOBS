@@ -5,6 +5,11 @@
     width: 100%;
     margin-bottom: 20px;
 
+    &.disable {
+        opacity: 0.8;
+        pointer-events: none
+    }
+
     .accordion-header {
         height: 30px;
         width: 100%;
@@ -17,6 +22,7 @@
 
         .accordion-title {
             margin-left: 10px;
+            text-transform: capitalize;
         }
 
         .fa-plus, .fa-minus {
@@ -52,6 +58,7 @@
 
             .checkbox {
                 margin: 1px;
+                cursor: pointer;
             }
 
             .checkbox-title {

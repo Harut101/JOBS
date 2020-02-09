@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import DropDown from '../DropDown/dropDown.js';
 import { useDispatch } from "react-redux";
-import { filterData, filterQuery } from '../../store/data/filter-data';
+import { filterData, filterQuery, advanceFilterQuery } from '../../helpers/filter-data.js';
 import '../Search/search.scss';
 
-function Search() {
+function Search({ advanceSearch }) {
   const dispatch = useDispatch();
 
   const [inputValue, setInputValue] = useState('');
@@ -14,35 +14,33 @@ function Search() {
   function handleInputChange(e) {
     setInputValue(e.target.value);
     filterQuery.title =  e.target.value;
+    advanceFilterQuery.title =  e.target.value;
   }
 
   function handleropDownChange(title, e) {
-      if(title === 'Category') {
-
+      if(title === 'category') {
         setJobCategory(e.target.value);
         filterQuery.category =  e.target.value;
-      } else {
 
-        setJobLocation(e.target.value)
+      } else {
+        setJobLocation(e.target.value);
         filterQuery.location = e.target.value;
+
       }
   }
 
   function searchJobs() {
-    dispatch({
-      type: "FILTER",
-      payload: {
-          query: filterQuery
-      }
-      
-    })
-    
+    if(advanceSearch) {
+       dispatch({ type: "ADVACE_FILTER",  payload: { query: advanceFilterQuery }});
+    } else {
+       dispatch({ type: "FILTER", payload: { query: filterQuery } });
+    }
   }
 
   return (
     <div className="Search">
-      <DropDown data={filterData[0]} actionChange={handleropDownChange} value={jobCategory}/>
-      <DropDown data={filterData[2]} actionChange={handleropDownChange} value={jobLocation}/>
+      <DropDown data={filterData[0]} actionChange={handleropDownChange} advanceSearch={advanceSearch}  value={jobCategory}/>
+      <DropDown data={filterData[2]} actionChange={handleropDownChange} advanceSearch={advanceSearch}  value={jobLocation}/>
       <input 
         className='search-input' 
         type="text" 

@@ -1,6 +1,11 @@
 .DropDown {
     margin-right: 1px;
     width: 20%;
+
+    &.disable {
+        opacity: .8;
+        pointer-events: none;
+    }
     
     .select {
         display: block;
@@ -24,6 +29,7 @@
         background-size: .65em auto, 100%;
         outline: none;
         border: none;
+        text-transform: capitalize;
         
         &:hover {
             cursor: pointer;

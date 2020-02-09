@@ -17,7 +17,7 @@ function Search({ advanceSearch }) {
     advanceFilterQuery.title =  e.target.value;
   }
 
-  function handleropDownChange(title, e) {
+  function handleDropDownChange(title, e) {
       if(title === 'category') {
         setJobCategory(e.target.value);
         filterQuery.category =  e.target.value;
@@ -39,8 +39,8 @@ function Search({ advanceSearch }) {
 
   return (
     <div className="Search">
-      <DropDown data={filterData[0]} actionChange={handleropDownChange} advanceSearch={advanceSearch}  value={jobCategory}/>
-      <DropDown data={filterData[2]} actionChange={handleropDownChange} advanceSearch={advanceSearch}  value={jobLocation}/>
+      <DropDown data={filterData[0]} actionChange={handleDropDownChange} advanceSearch={advanceSearch}  value={jobCategory}/>
+      <DropDown data={filterData[2]} actionChange={handleDropDownChange} advanceSearch={advanceSearch}  value={jobLocation}/>
       <input 
         className='search-input' 
         type="text" 

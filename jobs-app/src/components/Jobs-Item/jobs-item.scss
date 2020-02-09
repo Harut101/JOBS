@@ -26,7 +26,6 @@
             display: flex;
             max-height: 80px;
             flex-wrap: wrap;
-            justify-content: space-around;
     
             .title {
                 width: 100%;
@@ -37,6 +36,7 @@
     
             .location {
                 font-size: 13px;
+                margin-left: 10px;
 
                 .fa-map-marker-alt {
                     margin-right: 5px;
@@ -45,6 +45,7 @@
     
             .employment {
                 font-size: 13px;
+                margin-left: 10px;
 
                 .fa-clock {
                     margin-right: 5px;

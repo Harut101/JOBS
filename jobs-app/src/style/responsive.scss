@@ -7,6 +7,14 @@
             .filter-section {
                 width: unset;
                 margin-right: unset;
+
+                .Accordion {
+                    margin-bottom: 10px;
+                    
+                    .accordion-header {
+                        border-radius: unset;
+                    }
+                }
             }
 
             .jobs-section {
